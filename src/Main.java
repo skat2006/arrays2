@@ -6,10 +6,10 @@ public class Main {
 
         // задача 1
         int totalSum = 0;
-        for (Integer value : array) {
+        for (int value : array) {
             totalSum += value;
         }
-        System.out.println("Сумма трат за месяц составила " + new DecimalFormat("###,###").format(totalSum) + " рублей\n");
+        System.out.println("Сумма трат за месяц составила " + totalSum + " рублей\n");
 
         // задача 2
         int maxNum = array[0];
@@ -27,10 +27,11 @@ public class Main {
 
         // задача 3
         int summary = 0;
-        for (Integer value : array) {
+        for (int value : array) {
             summary += value;
         }
-        System.out.println("\nСредняя сумма трат за месяц составила " + (summary / (array.length)) + " рублей\n");
+        float res = (float) summary / (float) array.length;
+        System.out.println("\nСредняя сумма трат за месяц составила " + res + " рублей\n");
 
         // задача 4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
@@ -39,12 +40,12 @@ public class Main {
         }
     }
 
-    public static int[] randomIntArray() {
+    private static int[] randomIntArray() {
         int[] arr = new int[30];
         System.out.println("Случайные числа в массиве: ");
         for (int i = 0; i < 30; i++) {
             arr[i] = (int) (Math.random() * ((200000 - 100000) + 1)) + 100000;
-            System.out.print(arr[i] + ",");
+            System.out.print(arr[i] + " ");
         }
         System.out.println("\n");
         return arr;
